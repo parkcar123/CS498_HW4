@@ -1,0 +1,5 @@
+Q1: TMS handles conflict detection, transaction ordering, and commit logging. SS handles durable key value storage and read serving. This is done so that each layer can scale on its own, and so that storage and transaction throughout does not affect each other.
+Q2: Resolvers detect R/W conflicts by checking commits against the last read version, happening after commit submission but before Logservers write.
+Q3: The read version is a seq issued timestamp which pins the transaction to a consistent snapshot. This enables serializability.
+Q4: Snapshot read differs from standard reads because they skip the conflict set. You'd use snapshot when the read does not affect write correctness.
+Q5: During normal operations, Storageservers keep pulling mutatations from LogServers so recovery starts a new epoch(no redo replay).
