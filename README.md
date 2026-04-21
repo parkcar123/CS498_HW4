@@ -1,1 +1,1 @@
-![screenshot](/Users/prakharagarwal/CS498/CS498_HW4/Screenshot 2026-04-20 at 8.52.14 PM.png)
+![screenshot](Screenshot 2026-04-20 at 8.52.14 PM.png)
